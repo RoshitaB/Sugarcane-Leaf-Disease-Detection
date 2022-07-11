@@ -1,0 +1,178 @@
+body {
+	padding-top: 50px;
+	color: #959595;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	color: rgb(20, 20, 20);
+	}
+	.logo{
+		display: flex;
+		align-items: center;
+	}
+	
+	.logo img{
+		width: 110px;
+		padding: 0 30px;
+	}
+
+.feature {
+	background-color: rgb(33, 193, 92);
+	color: rgb(250, 253, 249);
+	opacity: 0.8;
+	background-image: url('crop_3.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+	}
+	.container_u {
+		background-color: #c2c6c2;
+		width: 60%;
+		min-width: 450px;
+		position: relative;
+		margin: 50px auto;
+		padding: 50px 20px;
+		border-radius: 7px;
+		box-shadow: 0 20px 35px #21a16c(0, 0, 0, 0.05);
+		
+		opacity: 0.8;
+	background-image: url('Plant-diseases.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+	}
+	
+	
+	label {
+		display: block;
+		position: relative;
+		background-color: #21a16c;
+		color: #ffffff;
+		font-size: 18px;
+		text-align: center;
+		width: 300px;
+		padding: 18px 0;
+		margin: auto;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	input[type="file"] {
+		display: none;
+	}
+	
+	.container p {
+		text-align: center;
+		margin: 20px 0 30px 0;
+		color: #21a16c;
+	}
+	
+	#images {
+		width: 90%;
+		position: relative;
+		margin: auto;
+		display: flex;
+		justify-content: space-evenly;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	
+	figure {
+		width: 45%;
+	}
+	
+	img {
+		width: 25%;
+	}
+	
+	figcaption {
+		text-align: center;
+		font-size: 2.4vmin;
+		margin-top: 0.5vmin;
+	}
+	input[type="file"] {
+		display: inside;
+	}
+
+.article-intro {
+    margin-bottom: 25px;
+}
+.flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	margin-right: 50px;
+	margin-left: 800px;
+	border-radius: 7px;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+.flip-card-back {
+	background-color:#000000;
+	color: white;
+	transform: rotateY(180deg);
+}
+
+.container_show{
+background-color: #0e472f;
+width: 100%;
+min-width: 100px;
+
+position: relative;
+margin: 50px auto;
+padding: 50px 20px;
+
+box-shadow: 0 20px 35px #21a16c(0, 0, 0, 0.05);
+
+	background-image: url('Bg.jpeg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+}
+
+.footer-blurb {
+    padding: 30px 0;
+    background-color: goldenrod;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 30px;
+    }
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
