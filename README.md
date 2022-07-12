@@ -11,7 +11,7 @@ This project allows the detection of abnormalities that maybe present on the lea
   * **Red Rust:** 75 Images
 
 ### Methodology:
-Transfer Learning approach was implemented with the help of DenseNet201 architecture. To improve the accuracy of the model, Support Vector Machine (SVM) was incorporated in the final layer of the model. An accuracy of 98% and a validation accuracy of up to 97.78% was obtained.
+Transfer Learning approach was implemented with the help of **DenseNet201** architecture. To improve the accuracy of the model, **Support Vector Machine (SVM)** was incorporated in the final layer of the model. An **Accuracy** of **98%** and a **Validation Accuracy** of **97.78%** was obtained.
 
 ### Results:
 ![Alt text](/media/output/home.png "Home Page")
