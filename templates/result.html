@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,20 +17,13 @@
             </ul>
         </div>
 
-        <div class="welcome-text">
-            <h1>Sugarcane Leaf Disease Detection</h1>
-            <form method="post" enctype="multipart/form-data" action="predictImage">
-            {% csrf_token %}
-                <input name="filePath" class="fas fa-upload" type="file" id="files" class="hidden"/>
-                <label for="files">Select file</label>
-                
-                <br>
-                
-                <label for="file-input">
-                    <i class="fas fa-upload"></i> &nbsp;
-                    <input type="submit" class="fas fa-upload" value="SUBMIT">
-                </label>
-            </form>
+        <div class="main_section">
+            {% if pred_flag %}
+            <h1>The Sugarcane Leaf is <span>{{predictedLabel}}</span>! </h1>
+            {% else %}
+            <h1>The Sugarcane Leaf has <span>{{predictedLabel}}</span>! </h1>
+            {% endif %}
+            <img src={{filePathName}} alt='' style="width:300px;height:300px;border: 5px solid white; margin-top: 20px;"> 
         </div>
 
         
@@ -83,50 +75,23 @@ header
 {
     color: #ffe15d;
 }
-.welcome-text 
+.main_section 
 {
     position: absolute;
-    margin: 20% 30%;
+    margin: 10% 30%;
     text-align: center;
-    text-transform: uppercase;
 }
-.welcome-text h1 
+.main_section h1 
+{
+    color: white;
+    font-size: 60px;
+    text-shadow: 3px 3px black;
+}
+.main_section h1 span
 {
     color: #ffe15d;
     font-size: 60px;
     text-shadow: 3px 3px black;
-}
-label 
-{
-    display: inline-block;
-    position: relative; 
-    color: #ffffff;
-    border: 1px solid #fff;
-    font-size: 18px;
-    text-align: center;
-    width: 150px;
-    padding: 10px 0px;
-    margin-top: 20px;
-}
-label:hover 
-{
-    background: #fff;
-    color: #333;
-}
-input[type="file"] {
-    display: none;
-}
-input[type="submit"]
-{
-    background-color:rgba(255, 255, 255, 0);
-    font-size: 18px; 
-    color: #fff;
-    border:rgba(255, 255, 255, 0); ;
-}
-input[type="submit"]:hover
-{
-    background: #fff;
-    color: #333;
 }
 @media (max-width:600px) 
 {
@@ -139,11 +104,6 @@ input[type="submit"]:hover
     {
         width: 100%;
         height: 100vh;
-    }
-    .welcome-text 
-    {
-        position: absolute;
-        text-align: center;
     }
     .nav-area 
     {
@@ -158,10 +118,6 @@ input[type="submit"]:hover
     .nav-area 
     {
         text-align: center;
-    }
-    .welcome-text h1 
-    {
-        font-size: 30px;
     }
 }
 </style>
