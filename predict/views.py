@@ -43,9 +43,13 @@ def predictImage(request):
     global prediction_label
     prediction_label=prediction_label=classes[MaxPosition]
     print(prediction_label)
+    if(prediction_label=="Healthy"):
+        pred_flag=True
+    else:
+        pred_flag=False
 
-    context={'filePathName':filePathName,'predictedLabel':prediction_label}
-    return render(request,'crop_index.html',context) 
+    context={'filePathName':filePathName,'predictedLabel':prediction_label,'pred_flag':pred_flag}
+    return render(request,'index.html',context) 
 
 
 

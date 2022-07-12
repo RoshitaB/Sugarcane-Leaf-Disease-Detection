@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.index,name='homepage'),
     path('predictImage',views.predictImage,name='predictImage'),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
