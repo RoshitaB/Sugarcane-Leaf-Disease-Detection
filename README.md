@@ -9,3 +9,5 @@ This project allows the detection of abnormalities that maybe present on the lea
   * **Healthy:** 75 Images
   * **Red Rot:** 74 Images
   * **Red Rust:** 75 Images
+
+![Alt text](/media/output/home.png "Home Page")
